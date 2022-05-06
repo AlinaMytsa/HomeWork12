@@ -438,6 +438,13 @@ footer{
   /*banner*/
   .banner-heading{
     font-size: 40px;
+    line-height: 30px;
+  }
+  .banner-text{
+    font-size: 12px;
+  }
+  .banner-row{
+    gap: 27px;
   }
   /*services*/
   .services .services-row{
@@ -484,13 +491,12 @@ footer{
     margin-bottom: 45px;
   }
   .team .wrapper{
-    gap: 2px;
     display: flex;
     flex-wrap: wrap;
   }
   .card-gallery {
-    min-width: 103px;
-    min-height: 103px;
+    max-width: 103px;
+    max-height: 103px;
   }
   /*news*/
   .news{
@@ -501,7 +507,7 @@ footer{
   }
   /*contact block*/
   .contact-block{
-    margin-bottom: 110px;
+    margin-bottom: 50px;
   }
   .get-heading{
     margin-bottom: 40px;
@@ -509,6 +515,8 @@ footer{
   .black-block{
     display: block;
     width: 100%;
+    position: unset;
+    margin: 50px 0 0 0;
   }
 
 }
@@ -521,14 +529,19 @@ footer{
     padding: 0 0 20px 0;
   }
   .banner-heading{
-    max-width: 400px;
     font-size: 32px;
   }
-  .btn{
-    padding: 12px 60px
+  .banner-text {
+    font-size: 14px;
   }
-  .banner-row{
-    gap: 0;
+  .banner .col{
+    width: 100%;
+  }
+  .btn{
+    padding: 15px 90px
+  }
+  .banner{
+    margin-bottom: 50px;
   }
   /*services*/
   .main-heading{
@@ -548,18 +561,56 @@ footer{
   .services .item:last-child{
     padding: 0;
   }
+  .services .block{
+    margin-bottom: 60px;
+  }
   p{
     font-size: 14px;
   }
   .services h2{
     font-size: 18px;
   }
+  /*portfolio*/
+  .portfolio{
+    margin-bottom: 45px
+  }
+  .horizontal-line1{
+    margin-bottom: 45px
+  }
+  /*team*/
+  .bottom{
+    gap: 110px;
+  }
+  .card-gallery{
+    position: unset;
+    display: inline-block;
+    min-width: 150px;
+    min-height: 150px;
+  }
+  /*news*/
+  .email-form{
+    padding: 35px 159px 35px 37px;
+  }
+  .news{
+    margin-bottom:50px;
+  }
+  /*contact block*/
+  .get-heading{
+    margin-bottom: 30px;
+  }
+  .get-text{
+    margin-bottom: 30px;
+  }
+  .hr3{
+    margin-bottom: 30px;
+  }
   .get-name{
-    margin-right: 20px;
+    margin-right: 10px;
   }
   .contact-btn{
     padding: 25px 277px 25px 277px;
   }
+
 }
 @media (max-width: 767px) {
   .container{
@@ -598,6 +649,75 @@ footer{
   .services .btn{
     padding: 15px 150px;
   }
+  /*portfolio*/
+  .hr{
+    margin-bottom: 50px;
+  }
+  .portfolio{
+    font-size: 12px;
+  }
+  .square{
+    width: 130px;
+    height: 130px;
+  }
+  .row{
+    justify-content: space-evenly;
+  }
+  /*team*/
+  .square2{
+    width: 219px;
+    height: 394px;
+  }
+  .social{
+    font-size: 14px;
+  }
+  .team-list{
+    margin-bottom: 30px;
+  }
+  .card-gallery{
+    min-height: 120px;
+    min-width: 120px;
+  }
+.team .wrapper{
+  justify-content: center;
+}
+/*news*/
+  .news-heading{
+    font-size: 35px;
+  }
+  .news-text{
+    margin-bottom: 30px;
+  }
+  .news-wrap {
+    padding: 65px 0 90px 0;
+  }
+  .email-form {
+    padding: 30px 62px 30px 37px;
+  }
+  .news-btn{
+    padding: 25px 37px;
+  }
+  /*contact block*/
+  .get-heading {
+    font-size: 35px;
+  }
+  p{
+    font-size: 12px;
+  }
+  .get-name,
+  .get-mail{
+    padding: 21px 22px 21px 40px;
+    margin-bottom: 30px;
+  }
+  textarea {
+    padding: 20px 299px 154px 38px;
+  }
+  .contact-btn {
+    padding: 20px 199px;
+  }
+  .black-block{
+    padding: 90px 0 90px 80px;
+  }
 }
 @media (max-width: 650px) {
   .container{
@@ -607,17 +727,170 @@ footer{
   .banner-heading{
     font-size: 32px;
   }
+  .banner .col{
+    margin-bottom: 50px;
+  }
   /*services*/
+  .services .btn {
+    padding: 15px 108px;
+  }
+  /*portfolio*/
+  .portfolio{
+    font-size: 10px;
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+  .horizontal-line1 {
+    margin-bottom: 26px;
+  }
+  .square {
+    width: 106px;
+    height: 106px;
+  }
+  .portfolio-section {
+    margin-bottom: 39px;
+  }
+  /*team*/
+  .team-heading {
+    font-size: 34px;
+  }
+  .square2 {
+    width: 149px;
+    height: 310px;
+  }
+  .team .wrapper{
+    flex-wrap: wrap;
+  }
+  .card-gallery{
+    min-width: 100px;
+    min-height: 100px;
+  }
+  .team-list{
+    gap: 13px;
+  }
+  .bottom {
+    gap: 86px;
+  }
+  /*news*/
+  .news-heading {
+    font-size: 29px;
+  }
+  .email-form {
+    padding: 20px 1px 20px 18px;
+    margin-right: 0;
+  }
+  .news-btn {
+    padding: 15px 15px;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .news-wrap {
+    padding: 65px 0 65px 0;
+  }
+  /*contact block*/
+  .get-heading {
+    font-size: 25px;
+  }
+  .get-it{
+    width: 100%;
+  }
+  textarea {
+    padding: 20px 168px 124px 38px;
+  }
+  .contact-btn {
+    padding: 16px 133px;
+  }
+  .contact-info {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .black-block{
+    line-height: 25px;
+    padding: 50px 0 50px 80px;
+  }
+  /*footer*/
+  .footer-section {
+    padding: 30px 0 30px 0;
+  }
+  footer p{
+    font-size: 6px;
+  }
 }
 @media (max-width: 516px) {
   .container{
     max-width: 372px;
   }
   /*banner*/
-  .btn{
-    padding: 15px 90px;
+  .banner {
+    padding: 0 0 1px 0;
   }
   /*services*/
+  .services .btn {
+    padding: 11px 88px;
+  }
+  /*portfolio*/
+  .hr {
+    margin-bottom: 30px;
+  }
+  .portfolio-heading{
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  /*team*/
+  .team-heading {
+    font-size: 28px;
+  }
+  .right-bottom {
+    width: 65%;
+  }
+  .name{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .team p{
+    font-size: 10px;
+  }
+  .team-list {
+    gap: 5px;
+    display: inline-block;
+  }
+  .square2{
+    height: 177px;
+  }
+  .bottom {
+    gap: 79px;
+  }
+  .team .wrapper{
+    width: 100%;
+  }
+  /*news*/
+  .news-wrap {
+    padding: 30px 0 53px 0;
+  }
+  .email-form {
+    padding: 20px 99px 20px 18px;
+    margin-bottom: 20px;
+  }
+  .news-btn {
+    padding: 15px 105px;
+  }
+  /*contact block*/
+  .get-name, .get-mail {
+    padding: 15px 15px 15px 20px;
+    margin-bottom: 15px;
+  }
+  textarea {
+    padding: 20px 80px 108px 17px;
+    margin-bottom: 29px;
+  }
+  .contact-btn {
+    padding: 16px 79px;
+  }
+  /*footer*/
+  .footer-images{
+    padding: 0 10px;
+  }
+
 }
 @media (max-width: 372px) {
   .container{
@@ -627,7 +900,6 @@ footer{
   .btn{
     padding: 10px 80px;
   }
-  /*services*/
 }
 
 
