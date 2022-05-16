@@ -92,7 +92,7 @@ body{
 }
 /*horizontal lines*/
 .hr{
-  border-bottom: 2px solid var(--white-color);
+  border-bottom: 2px solid #ececec;
   max-width: 1250px;
   margin-bottom: 107px;
 }
@@ -158,7 +158,6 @@ header nav ul{
   margin-bottom: 35px;
 }
 .banner-text{
-  max-width: 515px;
   margin-bottom: 60px;
 }
 .banner-contact{
@@ -192,7 +191,6 @@ header nav ul{
   letter-spacing: 3px;
 }
 .text{
-  max-width: 510px;
   margin-bottom: 59px;
 }
 .services .services-contact{
@@ -306,7 +304,7 @@ a:hover,
   margin-bottom: 37px;
 }
 .name-text{
-  max-width: 630px;
+  max-width: 75%;
   color: var(--black-color);
   margin-bottom: 50px;
 }
@@ -333,10 +331,10 @@ i:hover{
   gap: 20px;
 }
 .card-gallery{
-position: relative;
+  position: relative;
   display: inline-block;
   min-width: 197px;
-  min-height: 215px;
+  min-height: 150px;
 }
 .card-gallery .img-top{
   position: absolute;
@@ -381,13 +379,13 @@ position: relative;
 }
 .news-form{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 25px;
 }
 .email-form{
-  padding: 35px 365px 35px 37px;
+  padding: 35px 338px 35px 37px;
   border: none;
   border-radius: 5px;
-  margin-right: 20px;
 }
 .news-btn{
   background-color: var(--accent-color);
@@ -396,7 +394,7 @@ position: relative;
   font-size: var(--font-lg);
   border-radius: 5px;
   border: 1px solid var(--accent-color) ;
-  padding: 30px 60px;
+  padding: 32px 60px;
   cursor: var(--cursor);
 }
 .news-btn:hover{
@@ -425,30 +423,22 @@ position: relative;
   color: var(--black-color);
   margin-bottom: 58px;
 }
-.form-input{
+.get-form{
   display: flex;
   justify-content: space-between;
-}
-.get-name{
-  width: calc( 50% - 25px);
-  padding: 25px 0 25px 45px;
-  border: none;
-  border-radius: 7px;
-  background-color: var(--input-color);
-  font-size: var(--font-lg);
   margin-bottom: 50px;
 }
+.get-name,
 .get-mail{
-  width: calc( 50% - 25px);
+  width: calc(50% - 25px);
   padding: 25px 0 25px 45px;
   border: none;
   border-radius: 7px;
   background-color: var(--input-color);
   font-size: var(--font-lg);
-  margin-bottom: 50px;
 }
 textarea{
-  width: 750px;
+  width: 732px;
   height: 250px;
   padding: 25px 0 0 45px ;
   border: none;
@@ -520,31 +510,46 @@ footer{
   :root{
     --content-width: 1024px;
   }
-
-  header{
-    display: none;
+  header {
+    padding: 10px 0 0 0;
+  }
+  header a {
+    font-size: 10px;
+    padding: 13px 30px;
   }
   /*banner*/
-  .banner-heading{
-    font-size: 40px;
-    line-height: 30px;
+  .banner {
+    padding: 20px 0 20px 0;
   }
-  .banner-text{
-    font-size:var(--font-sm);
+  .banner-block1{
+    margin-bottom: 50px;
+  }
+  .banner-heading ,
+  .main-heading{
+    font-size: 35px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .banner-text,
+  .text{
+    text-align: center;
+    margin-bottom: 45px;
   }
   .banner-row{
-    gap: 27px;
+    display: block;
+  }
+  .box{
+    text-align: center;
+  }
+  .btn {
+    padding: 15px 135px;
   }
   /*services*/
   .services .services-row{
-    gap: 10px;
+    display: block;
   }
-  .main-heading{
-    font-size: 35px;
-    line-height: 37px;
-  }
-  .text{
-    max-width: 400px;
+  .services .block{
+    width: 100%;
   }
   .services .item{
     padding: 0 20px 0 0;
@@ -557,35 +562,56 @@ footer{
     margin-bottom: 60px;
   }
   /*our team*/
+  .bottom{
+    display: block;
+  }
+  .right-bottom{
+    width: 100%;
+  }
+  .square2{
+    margin-bottom: 40px;
+  }
   .team{
     margin-bottom: 70px;
   }
   .team-heading{
     margin-bottom: 18px;
   }
+  .team-text{
+    max-width: 100%;
+    text-align: start;
+  }
   .hr2{
     margin-bottom: 40px;
-  }
-  .square2{
-    width: 246px;
-    height: 462px;
   }
   .name{
     margin-bottom: 30px;
   }
   .name-text{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .team-list{
     margin-bottom: 45px;
+    justify-content: center;
+    gap: 65px;
+  }
+  .wrapper{
+    gap: 45px;
   }
   .team .wrapper{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .card-gallery {
     max-width: 103px;
-    max-height: 103px;
+    max-height: 165px;
+  }
+  .card-gallery .name-jue-text{
+    margin: 0 40px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 11px;
   }
   /*news*/
   .news{
@@ -620,11 +646,8 @@ footer{
     --content-width: 767px;
   }
   /*banner*/
-  .banner{
-    padding: 0 0 20px 0;
-  }
   .banner-heading{
-    font-size: 32px;
+    font-size: 35px;
   }
   .banner-text {
     font-size: 14px;
@@ -632,10 +655,8 @@ footer{
   .banner .col{
     width: 100%;
   }
-  .btn{
-    padding: 15px 90px
-  }
   .banner{
+    padding: 40px 0 15px 0;
     margin-bottom: 50px;
   }
   /*services*/
@@ -643,12 +664,6 @@ footer{
     font-size: 25px;
     line-height: 30px;
     margin-bottom: 30px;
-  }
-  .text{
-    font-size: var(--font-md);
-  }
-  .services .btn{
-    padding: 15px 90px;
   }
   .services .item{
     padding: 0 10px 0 0;
@@ -680,15 +695,15 @@ footer{
   .bottom{
     gap: 110px;
   }
-  .wrapper{
-    justify-content: flex-start;
-  }
   .card-gallery{
-    position: unset;
     display: inline-block;
     min-width: 150px;
     min-height: 150px;
   }
+  .card-gallery .name-jue-text {
+    margin: 10px 33px;
+  }
+
   /*news*/
   .email-form{
     padding: 35px 159px 35px 37px;
@@ -715,28 +730,19 @@ footer{
   :root{
     --content-width: 650px;
   }
+  /*header*/
+  header{
+    display: none;
+  }
   /*banner*/
-  .banner-row{
-    display: block;
-  }
-  .banner-block1{
-    width: 100%;
-    margin-bottom: 40px;
-  }
   .banner-heading{
-    max-width: 700px;
-    font-size: 40px;
-    line-height: 1;
+    font-size: 27px;
   }
   .banner-text{
     margin-bottom: 40px;
   }
   .btn{
     padding: 15px 118px;
-  }
-  .banner-block2 col{
-    width: 100%;
-    display: block;
   }
   /*services*/
   .services .services-row{
@@ -764,10 +770,6 @@ footer{
     justify-content: space-evenly;
   }
   /*team*/
-  .square2{
-    width: 219px;
-    height: 394px;
-  }
   .social{
     font-size: 14px;
   }
@@ -778,7 +780,7 @@ footer{
     min-height: 120px;
     min-width: 120px;
   }
-/*news*/
+  /*news*/
   .news-heading{
     font-size: 35px;
   }
@@ -786,14 +788,21 @@ footer{
     margin-bottom: 30px;
   }
   .news-wrap {
-    padding: 65px 0 90px 0;
+    padding: 65px 0 50px 0;
   }
-  .email-form {
-    padding: 30px 62px 30px 37px;
+  .news-form{
+    display:block;
+    margin-bottom: 15px;
+  }
+  .email-form{
+    width: 100%;
+    margin-bottom: 23px;
   }
   .news-btn{
-    padding: 25px 37px;
+    width: 100%;
+    padding: 17px 37px;
   }
+
   /*contact block*/
   .get-heading {
     font-size: 35px;
@@ -801,39 +810,44 @@ footer{
   p{
     font-size:var(--font-sm);
   }
+  .get-it{
+    margin-bottom: 15px;
+  }
+  .get-form{
+    margin-bottom: 35px;
+  }
   .get-name,
   .get-mail{
     padding: 21px 0 21px 40px;
-    margin-bottom: 30px;
   }
   textarea {
     padding: 20px 0 154px 38px;
     width: 621px;
+    margin-bottom: 15px;
   }
   .contact-btn {
     padding: 20px 0;
   }
   .black-block{
     padding: 90px 0 90px 80px;
+    margin-top: 15px;
+  }
+  .footer-section {
+    padding: 35px 0 35px 0;
   }
 }
 @media (max-width: 650px) {
   :root{
     --content-width: 516px;
   }
-  /*banner*/
-  .banner-heading{
-    font-size: 32px;
-  }
-  .banner .col{
-    margin-bottom: 50px;
-  }
   /*services*/
-  .services .btn {
-    padding: 15px 108px;
+  .btn {
+    display: block;
   }
   /*portfolio*/
   .portfolio{
+    text-align: center;
+    gap: 20px;
     font-size: 10px;
     flex-direction: column;
     margin-bottom: 35px;
@@ -856,9 +870,6 @@ footer{
     width: 149px;
     height: 310px;
   }
-  .team .wrapper{
-    flex-wrap: wrap;
-  }
   .card-gallery{
     min-width: 100px;
     min-height: 100px;
@@ -869,20 +880,15 @@ footer{
   .bottom {
     gap: 86px;
   }
+  .wrapper {
+    gap: 24px;
+  }
   /*news*/
   .news-heading {
-    font-size: 29px;
-  }
-  .email-form {
-    padding: 20px 1px 20px 18px;
-  }
-  .news-btn {
-    padding: 15px 15px;
-    font-size: var(--font-md);
-    font-weight: normal;
+    font-size: 24px;
   }
   .news-wrap {
-    padding: 65px 0 65px 0;
+    padding: 40px 0 40px 0;
   }
   /*contact block*/
   .get-heading {
@@ -923,17 +929,21 @@ footer{
   :root{
     --content-width: 372px;
   }
-  /*banner*/
-  .banner {
-    padding: 0 0 1px 0;
-  }
   /*services*/
   .services .btn {
     padding: 11px 88px;
   }
   /*portfolio*/
-  .portfolio{
+  .portfolio .row{
+    display: flex;
     gap: 10px;
+  }
+  .square {
+    width: 145px;
+    height: 145px;
+  }
+  .portfolio{
+    gap: 15px;
   }
   .hr {
     margin-bottom: 30px;
@@ -946,19 +956,18 @@ footer{
   .team-heading {
     font-size: 28px;
   }
-  .right-bottom {
-    width: 65%;
-  }
   .name{
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 10px;
   }
-  .team p{
-    font-size: 10px;
+  .name-text{
+    margin-bottom: 25px;
   }
   .team-list {
-    gap: 5px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
   }
   .square2{
     height: 177px;
@@ -973,6 +982,9 @@ footer{
   .news-wrap {
     padding: 30px 0 53px 0;
   }
+  .news-text{
+    font-size: 18px;
+  }
   .email-form {
     padding: 20px 99px 20px 18px;
     margin-bottom: 20px;
@@ -981,24 +993,41 @@ footer{
     padding: 15px 105px;
   }
   /*contact block*/
+  .get-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
   .get-name, .get-mail {
+    width: 100%;
     font-size: var(--font-sm);
     padding: 15px 0 15px 20px;
-    margin-bottom: 15px;
   }
   textarea {
     font-size: var(--font-sm);
     height: 155px;
     padding: 20px 0 0 17px;
-    margin-bottom: 29px;
-    width: 290px;
+    margin-bottom: 10px;
+    width: 100%;
   }
   .contact-btn {
     padding: 16px 0;
   }
   /*footer*/
-  .footer-images{
-    padding: 0 10px;
+  .footer-section{
+    padding: 10px 0 10px 0;
+  }
+  .footer-wrap{
+    flex-direction: column;
+    text-align: center;
+    gap:10px;
+  }
+  .footer-leftside{
+    font-size: 10px;
+  }
+  .footer-rightside ul{
+    padding: 0;
   }
 
 }
@@ -1007,8 +1036,26 @@ footer{
     --content-width: 320px;
   }
   /*banner*/
+  .banner{
+    padding: 25px 0 15px 0;
+  }
+  .banner-heading{
+    margin-bottom: 25px;
+  }
   .btn{
     padding: 10px 80px;
+  }
+  /*portfolio*/
+  .square {
+    width: 125px;
+    height: 125px;
+  }
+  /*news*/
+  .news-btn {
+    padding: 15px 90px;
+  }
+  .news-wrap {
+    padding: 30px 0 20px 0;
   }
 }
 
