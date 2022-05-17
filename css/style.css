@@ -184,27 +184,20 @@ body{
   font-weight: 700;
   font-size: var(--font-lg);
   cursor: var(--cursor);
+  display: inline-block;
 }
 /*horizontal lines*/
-.hr{
-  border-bottom: 2px solid #ececec;
-  max-width: 1250px;
-  margin-bottom: 107px;
-}
 .horizontal-line1{
   border-bottom: 2px solid var(--accent-color);
   max-width: var(--horizontal-line-width);
-  margin-bottom: 90px;
 }
 .hr2{
   border-bottom: 2px solid var(--accent-color);
   max-width: var(--horizontal-line-width);
-  margin-bottom: 70px;
 }
 .hr3{
   border-bottom: 2px solid var(--accent-color);
   max-width: var(--horizontal-line-width);
-  margin-bottom: 75px;
 }
 /*header*/
 header{
@@ -291,6 +284,8 @@ header nav ul{
   display: -ms-flexbox;
   display: flex;
   gap: 135px;
+  border-bottom: 2px solid #ececec;
+  max-width: 1250px;
 }
 .main-heading{
   font-weight: 700;
@@ -316,6 +311,7 @@ header nav ul{
 }
 .services .block{
   width: 50%;
+  margin-bottom: 110px;
 }
 .right-side{
   display: -webkit-box;
@@ -324,6 +320,7 @@ header nav ul{
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 0;
 }
 .services h2{
   font-size: 24px;
@@ -333,7 +330,6 @@ header nav ul{
 }
 .services .item{
   width: 50%;
-  padding: 0 50px 53px 0;
 }
 .services-image{
   max-width: 42px;
@@ -341,6 +337,9 @@ header nav ul{
   margin-bottom: 35px;
 }
 /*portfolio section*/
+.feature-heading{
+  margin-bottom: 90px;
+}
 .portfolio-section{
   margin-bottom: 130px;
 }
@@ -386,15 +385,18 @@ a:hover,
   justify-content: space-around;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  gap: 10px;
 }
 .square{
-  width: 300px;
+  width:calc(25% - 15px);
   height: 290px;
   background-color: var(--square-color);
-  margin-bottom: 10px;
 
 }
 /*team block*/
+.top{
+  margin-bottom: 70px;
+}
 .team{
   margin-bottom: var(--margin-bt);
 }
@@ -421,9 +423,6 @@ a:hover,
 .left-bottom{
   width: 25%;
 }
-.right-bottom{
-  width: 75%;
-}
 .name{
   font-weight: 600;
   font-size: 30px;
@@ -431,7 +430,7 @@ a:hover,
   margin-bottom: 37px;
 }
 .name-text{
-  max-width: 75%;
+  max-width: 630px;
   color: var(--black-color);
   margin-bottom: 50px;
 }
@@ -453,15 +452,20 @@ i:hover{
   transition: var(--transition);
 }
 .square2{
-  width: 320px;
   height: 490px;
   background-color: var(--square-color);
+}
+.right-bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .wrapper{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
+  justify-content: space-between;
 }
 .card-gallery{
   position: relative;
@@ -494,7 +498,6 @@ i:hover{
 /*news section*/
 .news{
   background-color: #f5f0dd;
-  margin-bottom: 108px;
 }
 .news-wrap{
   padding: 80px 0 140px 0;
@@ -510,6 +513,8 @@ i:hover{
 .news-text{
   color: var(--white-color);
   text-align: center;
+}
+.news-heading-block{
   margin-bottom: 62px;
 }
 .news-form{
@@ -521,10 +526,15 @@ i:hover{
   justify-content: center;
   gap: 25px;
 }
+.label{
+  display: block;
+  width: 42%;
+}
 .email-form{
-  padding: 35px 338px 35px 37px;
+  padding: 35px  37px;
   border: none;
   border-radius: 5px;
+  width: 100%;
 }
 .news-btn{
   background-color: var(--accent-color);
@@ -549,10 +559,14 @@ i:hover{
   display: -ms-flexbox;
   display: flex;
   margin-bottom: var(--margin-bt);
+  margin-top: 108px;
 }
 .get-it{
   width: 60%;
   display: inline-block;
+}
+.get-wrapper{
+  margin-bottom: 75px;
 }
 .get-heading{
   font-size: 42px;
@@ -632,12 +646,10 @@ textarea{
   margin-bottom: 44px;
 }
 /*footer*/
-.footer-section{
-  padding: 60px 0 35px 0;
-}
 footer{
   background-color: var(--main-bg);
   color: #b1b1b1;
+  padding: 60px 0 35px 0;
 }
 .footer-wrap{
   display: -webkit-box;
@@ -663,6 +675,7 @@ footer{
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  padding: 0;
 }
 /*media*/
 @media (max-width: 1280px) {
@@ -717,10 +730,19 @@ footer{
     padding: 0;
   }
   /*portfolio*/
+  .feature-heading {
+    margin-bottom: 65px;
+  }
   .portfolio-section{
     margin-bottom: 60px;
   }
+  .square{
+    height: 165px;
+  }
   /*our team*/
+  .top {
+    margin-bottom: 50px;
+  }
   .bottom{
     display: block;
   }
@@ -729,6 +751,7 @@ footer{
   }
   .square2{
     margin-bottom: 40px;
+    height: 290px;
   }
   .team{
     margin-bottom: 70px;
@@ -739,9 +762,6 @@ footer{
   .team-text{
     max-width: 100%;
     text-align: start;
-  }
-  .hr2{
-    margin-bottom: 40px;
   }
   .name{
     margin-bottom: 30px;
@@ -786,6 +806,9 @@ footer{
   .email-form{
     padding: 35px 276px 35px 37px;
   }
+  .news-wrap {
+    padding: 80px 0 80px 0;
+  }
   /*contact block*/
   .get-it{
     width: 100%;
@@ -795,6 +818,7 @@ footer{
   }
   .contact-block{
     margin-bottom: 50px;
+    margin-top: 60px;
   }
   .get-heading{
     margin-bottom: 40px;
@@ -850,9 +874,6 @@ footer{
   .portfolio{
     margin-bottom: 45px
   }
-  .horizontal-line1{
-    margin-bottom: 45px
-  }
   /*portfolio*/
   .portfolio{
     gap: 45px;
@@ -871,6 +892,12 @@ footer{
   }
 
   /*news*/
+  .news-text{
+    font-size: var(--font-md);
+  }
+  .label {
+    width: 100%;
+  }
   .email-form{
     padding: 35px 159px 35px 37px;
   }
@@ -882,9 +909,6 @@ footer{
     margin-bottom: 30px;
   }
   .get-text{
-    margin-bottom: 30px;
-  }
-  .hr3{
     margin-bottom: 30px;
   }
   .contact-btn{
@@ -911,6 +935,9 @@ footer{
     padding: 15px 118px;
   }
   /*services*/
+  .services {
+    margin-bottom: 35px;
+  }
   .services .services-row{
     display: block;
   }
@@ -921,8 +948,8 @@ footer{
     padding: 15px 150px;
   }
   /*portfolio*/
-  .hr{
-    margin-bottom: 50px;
+  .feature-heading {
+    margin-bottom: 35px;
   }
   .portfolio{
     font-size: var(--font-sm);
@@ -936,6 +963,9 @@ footer{
     justify-content: space-evenly;
   }
   /*team*/
+  .top {
+    margin-bottom: 35px;
+  }
   .social{
     font-size: 14px;
   }
@@ -950,12 +980,12 @@ footer{
     margin: 0 33px;
     font-size: 10px;
   }
+  .square2{
+    height: 165px;
+  }
   /*news*/
   .news-heading{
     font-size: 35px;
-  }
-  .news-text{
-    margin-bottom: 30px;
   }
   .news-wrap {
     padding: 65px 0 50px 0;
@@ -974,6 +1004,9 @@ footer{
   }
 
   /*contact block*/
+  .get-wrapper {
+    margin-bottom: 35px;
+  }
   .get-heading {
     font-size: 35px;
   }
@@ -1002,7 +1035,8 @@ footer{
     padding: 90px 0 90px 80px;
     margin-top: 15px;
   }
-  .footer-section {
+  /*footer*/
+  footer{
     padding: 35px 0 35px 0;
   }
 }
@@ -1025,9 +1059,6 @@ footer{
     flex-direction: column;
     margin-bottom: 35px;
   }
-  .horizontal-line1 {
-    margin-bottom: 26px;
-  }
   .square {
     width: 106px;
     height: 106px;
@@ -1038,10 +1069,6 @@ footer{
   /*team*/
   .team-heading {
     font-size: 34px;
-  }
-  .square2 {
-    width: 149px;
-    height: 310px;
   }
   .card-gallery{
     min-width: 100px;
@@ -1059,6 +1086,9 @@ footer{
   }
   .wrapper {
     gap: 24px;
+  }
+  .square2 {
+    height: 145px;
   }
   /*news*/
   .news-heading {
@@ -1086,6 +1116,9 @@ footer{
   .contact-btn {
     padding: 16px 0;
   }
+  .contact-block{
+    margin-top: 50px;
+  }
   .contact-info {
     font-size: var(--font-md);
     margin-bottom: 20px;
@@ -1110,6 +1143,9 @@ footer{
   .services .btn {
     padding: 11px 88px;
   }
+  .services .services-row{
+    margin-bottom: 60px;
+  }
   /*portfolio*/
   .portfolio .row{
     display: -webkit-box;
@@ -1130,6 +1166,9 @@ footer{
   .portfolio-heading{
     font-size: 26px;
     margin-bottom: 15px;
+  }
+  .feature-heading {
+    margin-bottom: 40px;
   }
   /*team*/
   .team-heading {
@@ -1173,6 +1212,12 @@ footer{
   .news-text{
     font-size: 18px;
   }
+  .news-heading-block {
+    margin-bottom: 35px;
+  }
+  .label{
+    width: 100%;
+  }
   .email-form {
     padding: 20px 99px 20px 18px;
     margin-bottom: 20px;
@@ -1192,6 +1237,9 @@ footer{
     gap: 10px;
 
   }
+  .get-wrapper {
+    margin-bottom: 45px;
+  }
   .get-name, .get-mail {
     width: 100%;
     font-size: var(--font-sm);
@@ -1207,9 +1255,12 @@ footer{
   .contact-btn {
     padding: 16px 0;
   }
+  .contact-block{
+    margin-top: 45px;
+  }
   /*footer*/
-  .footer-section{
-    padding: 10px 0 10px 0;
+  footer{
+    padding: 25px 0 35px 0;
   }
   .footer-wrap{
     -webkit-box-orient: vertical;
@@ -1241,15 +1292,28 @@ footer{
   .btn{
     padding: 10px 80px;
   }
+  /*services*/
+  .services .services-row{
+    margin-bottom: 65px;
+  }
+  .block{
+    margin-bottom: 30px;
+  }
   /*portfolio*/
   .square {
     width: 125px;
     height: 125px;
   }
+  .feature-heading {
+    margin-bottom: 30px;
+  }
   /*team*/
   .card-gallery .name-jue-text{
     margin: 0 33px;
     font-size: 10px;
+  }
+  .top{
+    margin-bottom: 20px;
   }
   /*news*/
   .news-btn {
@@ -1257,6 +1321,16 @@ footer{
   }
   .news-wrap {
     padding: 30px 0 20px 0;
+  }
+  .label{
+    width: 100%;
+  }
+  /*contact*/
+  .contact-block{
+    margin-top: 30px;
+  }
+  .get-wrapper{
+    margin-bottom: 20px;
   }
 }
 
