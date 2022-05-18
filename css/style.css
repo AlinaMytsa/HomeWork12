@@ -746,6 +746,9 @@ footer{
   .bottom{
     display: block;
   }
+  .left-bottom{
+    width: 40%;
+  }
   .right-bottom{
     width: 100%;
   }
@@ -890,7 +893,10 @@ footer{
   .card-gallery .name-jue-text {
     margin: 10px 33px;
   }
-
+.square2{
+  height: 165px;
+  margin-bottom: 20px;
+}
   /*news*/
   .news-text{
     font-size: var(--font-md);
@@ -1089,6 +1095,9 @@ footer{
   }
   .square2 {
     height: 145px;
+  }
+  .left-bottom{
+    width: 60%;
   }
   /*news*/
   .news-heading {
